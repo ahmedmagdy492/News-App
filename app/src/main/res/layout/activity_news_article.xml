@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsArticleActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        android:background="#000"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:padding="20sp"
+            android:id="@+id/txtMainTitle"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_centerHorizontal="true"
+            android:text="Article"/>
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="7sp"
+        android:layout_below="@+id/bar"
+        android:layout_margin="15sp"
+        app:cardCornerRadius="7sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="10sp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textSize="25sp"
+                android:textColor="#000"
+                android:fontFamily="@font/poppins_bold"
+                android:id="@+id/txtArtTitle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtContent"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_below="@id/txtArtTitle"
+                android:textSize="18sp"
+                android:textColor="#000"
+                android:text="Content"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:layout_margin="15sp"
+                android:background="#000"
+                android:layout_below="@+id/txtContent"
+                android:id="@+id/txtUri"
+                android:text="Read More"
+                android:fontFamily="@font/poppins_semibold"
+                android:onClick="btnMoreClicked"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
